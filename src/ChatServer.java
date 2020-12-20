@@ -332,8 +332,8 @@ public class ChatServer{
 
            					try {
 
-									//  Attach new 'User' object to key in case of new user
-									if(sk.attachment() == null){ sk.attach(new User());}
+							//  Attach new 'User' object to key in case of new user
+							if(sk.attachment() == null){ sk.attach(new User());}
 
          	   				// It's incoming data on a connection -- process it
             					sc = (SocketChannel)sk.channel();
@@ -353,7 +353,7 @@ public class ChatServer{
 							sk.cancel();
 
 							try {
-                			sc.close();
+                						sc.close();
 							} catch( IOException ie2 ) { System.out.println( ie2 ); }
 
 							System.out.println( "Closed "+sc );
